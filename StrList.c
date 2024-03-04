@@ -129,7 +129,9 @@ void StrList_print(const StrList *strList) {
         do {
             printf("%s ", iterator->data);
             iterator = iterator->next;
-        } while (iterator != NULL);
+        } while (iterator->next != NULL);
+
+        printf("%s", iterator->data);
     }
 
     printf("\n");
