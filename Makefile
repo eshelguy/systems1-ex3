@@ -8,8 +8,5 @@ StrList: StrList.c main.c
 
 all: StrList
 
-test: StrList.c test.c
-	$(CC) $(CFLAGS) -g -o $@ $^
-
 clean:
-	rm -f StrList test main
+	rm -f StrList main
