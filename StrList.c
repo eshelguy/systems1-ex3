@@ -96,12 +96,12 @@ void StrList_insertAt(StrList *strList, const char *data, int index) {
     } else {
         int i = 0;
         StrListNode *current = strList->head;
-        while (i != index && current->next != NULL) {
+        while (i != index - 1 && current->next != NULL) {
             i++;
             current = current->next;
         }
 
-        if (i == index) {
+        if (i == index - 1) {
             newItem->next = current->next;
             current->next = newItem;
         }
